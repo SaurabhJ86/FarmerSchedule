@@ -51,6 +51,7 @@ def farmer_detail(request,id):
 	# To get total cost of fertilizer for the farmer.
 	for f in get_farmer.countryfarm_set.all():
 		for g in f.sowingschedule_set.all():
+			# Used float
 			cost += g.quantity * float(g.fert_unit)
 
 	template_name = 'farmer_detail.html'

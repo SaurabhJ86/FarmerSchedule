@@ -1,0 +1,30 @@
+
+
+
+{% if schedules %}
+	<h4 align="center">All Schedules</h4>
+	{% for schedule in schedules %}
+
+		<p>{{ schedule }}</p>
+
+	{% endfor %}
+
+{% else %}
+	<h4>No Schedule</h4>
+
+{% endif %}
+
+
+{% if crop %}
+	
+	<h4 align="center">Fruits/Vegetables grown.</h4>
+	{% for key,value in crop.items %}
+
+		<p>{{ key }} is growing : <strong>{{ value }}</strong></p>
+
+	{% endfor %}
+
+{% else %}
+	<h4>No fruit being grown.</h4>
+
+{% endif %}
